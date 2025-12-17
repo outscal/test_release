@@ -1,0 +1,79 @@
+{
+  "hook_name": "subagent-stop-hook",
+  "timestamp": "2025-12-17T19:33:19.507456",
+  "input": {
+    "session_id": "645130e5-3732-453f-a6cb-00c798be61b8",
+    "transcript_path": "C:\\Users\\bhavy\\.claude\\projects\\C--Outscal-course-workflow\\645130e5-3732-453f-a6cb-00c798be61b8.jsonl",
+    "cwd": "C:\\Outscal\\course-workflow",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false,
+    "agent_id": "a60deaa",
+    "agent_transcript_path": "C:\\Users\\bhavy\\.claude\\projects\\C--Outscal-course-workflow\\agent-a60deaa.jsonl",
+    "agent_transcript_data": [
+      {
+        "parentUuid": null,
+        "isSidechain": true,
+        "userType": "external",
+        "cwd": "C:\\Outscal\\course-workflow",
+        "sessionId": "645130e5-3732-453f-a6cb-00c798be61b8",
+        "version": "2.0.71",
+        "gitBranch": "main",
+        "agentId": "a60deaa",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": "Warmup"
+        },
+        "uuid": "fb0a843b-26ef-4b2d-929b-8c9d0c677936",
+        "timestamp": "2025-12-17T14:03:07.293Z"
+      },
+      {
+        "parentUuid": "fb0a843b-26ef-4b2d-929b-8c9d0c677936",
+        "isSidechain": true,
+        "userType": "external",
+        "cwd": "C:\\Outscal\\course-workflow",
+        "sessionId": "645130e5-3732-453f-a6cb-00c798be61b8",
+        "version": "2.0.71",
+        "gitBranch": "main",
+        "agentId": "a60deaa",
+        "type": "assistant",
+        "uuid": "8d047759-1f82-48d5-ab9d-905a232da236",
+        "timestamp": "2025-12-17T14:03:18.810Z",
+        "message": {
+          "id": "719d2c4b-4c24-4aac-8d21-d34745e1fff1",
+          "container": null,
+          "model": "<synthetic>",
+          "role": "assistant",
+          "stop_reason": "stop_sequence",
+          "stop_sequence": "",
+          "type": "message",
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": null,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            }
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "You've hit your limit · resets 8:30pm (Asia/Calcutta)"
+            }
+          ],
+          "context_management": null
+        },
+        "error": "rate_limit",
+        "isApiErrorMessage": true
+      }
+    ]
+  }
+}

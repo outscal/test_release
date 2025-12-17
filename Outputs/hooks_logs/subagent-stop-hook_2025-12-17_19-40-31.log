@@ -1,0 +1,79 @@
+{
+  "hook_name": "subagent-stop-hook",
+  "timestamp": "2025-12-17T19:40:31.631762",
+  "input": {
+    "session_id": "b5fe536d-242e-448d-ba79-d81f4ec8ded8",
+    "transcript_path": "C:\\Users\\bhavy\\.claude\\projects\\C--Outscal-course-workflow\\b5fe536d-242e-448d-ba79-d81f4ec8ded8.jsonl",
+    "cwd": "C:\\Outscal\\course-workflow",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false,
+    "agent_id": "a6303b8",
+    "agent_transcript_path": "C:\\Users\\bhavy\\.claude\\projects\\C--Outscal-course-workflow\\agent-a6303b8.jsonl",
+    "agent_transcript_data": [
+      {
+        "parentUuid": null,
+        "isSidechain": true,
+        "userType": "external",
+        "cwd": "C:\\Outscal\\course-workflow",
+        "sessionId": "b5fe536d-242e-448d-ba79-d81f4ec8ded8",
+        "version": "2.0.71",
+        "gitBranch": "main",
+        "agentId": "a6303b8",
+        "type": "user",
+        "message": {
+          "role": "user",
+          "content": "Warmup"
+        },
+        "uuid": "215f6bcf-8e98-4132-8680-afb4862a8643",
+        "timestamp": "2025-12-17T14:10:20.563Z"
+      },
+      {
+        "parentUuid": "215f6bcf-8e98-4132-8680-afb4862a8643",
+        "isSidechain": true,
+        "userType": "external",
+        "cwd": "C:\\Outscal\\course-workflow",
+        "sessionId": "b5fe536d-242e-448d-ba79-d81f4ec8ded8",
+        "version": "2.0.71",
+        "gitBranch": "main",
+        "agentId": "a6303b8",
+        "type": "assistant",
+        "uuid": "8a3b66cc-c11c-4d1e-b40b-abccfe3515ee",
+        "timestamp": "2025-12-17T14:10:30.910Z",
+        "message": {
+          "id": "432c06ce-4f19-43ed-b50c-c34b367d4819",
+          "container": null,
+          "model": "<synthetic>",
+          "role": "assistant",
+          "stop_reason": "stop_sequence",
+          "stop_sequence": "",
+          "type": "message",
+          "usage": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0,
+            "server_tool_use": {
+              "web_search_requests": 0,
+              "web_fetch_requests": 0
+            },
+            "service_tier": null,
+            "cache_creation": {
+              "ephemeral_1h_input_tokens": 0,
+              "ephemeral_5m_input_tokens": 0
+            }
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Invalid API key · Please run /login"
+            }
+          ],
+          "context_management": null
+        },
+        "error": "authentication_failed",
+        "isApiErrorMessage": true
+      }
+    ]
+  }
+}
