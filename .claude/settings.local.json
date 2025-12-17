@@ -1,0 +1,6 @@
+{
+  "enabledMcpjsonServers": [
+    "course-tools-mcp"
+  ],
+  "enableAllProjectMcpServers": true
+}
