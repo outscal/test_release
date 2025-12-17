@@ -1,0 +1,11 @@
+{
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "course-tools-mcp"
+  ],
+  "permissions": {
+    "allow": [
+      "Bash(python:*)"
+    ]
+  }
+}
