@@ -1,5 +1,4 @@
 from typing import Dict, Any, List, Optional
-from pydantic_ai import Tool
 
 from scripts.controllers.utils.decorators.try_catch import try_catch
 from scripts.controllers.utils.session_manager import SessionManager
@@ -14,7 +13,7 @@ class ToolsManager(metaclass=SingletonMeta):
 
         logger.info(f"[TOOLS_MANAGER] Initialized with {len(self.tool_instances)} tools")
 
-    def _initialize_tools(self) -> Dict[str, Tool]:
+    def _initialize_tools(self) -> Dict[str, Any]:
         tool_instances = {
         }
 
