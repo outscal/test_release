@@ -72,6 +72,9 @@ The following environment variable is **optional** and only needed if you want t
 |----------|-------------|----------|
 | `ELEVENLABS_VOICE_ID` | Voice ID from ElevenLabs. You can pick different voice IDs from your ElevenLabs account if you want to change the voice. | No |
 
+> [!NOTE]
+> Only ElevenLabs' pre-made voices are supported. Custom or cloned voices will not work.
+
 ### 5. Create Your Video
 
 Run the video creation command:
