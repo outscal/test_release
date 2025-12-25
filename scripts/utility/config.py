@@ -12,7 +12,6 @@ _api_config = {}
 _config_loaded = False
 
 def _get_config(key: str, default=None):
-    """Get config value from API config first, then fall back to env."""
     return os.getenv(key, default) or _api_config.get(key)
 
 # Static config values
@@ -20,14 +19,16 @@ PROMPT_TAG = "production"
 MANIFEST_FILE = "Outputs/{topic}/manifest.json"
 WEBSITE_URL = "https://outscal.com"
 
-# Default values (will be updated when load_config() is called from app_config.py)
 ELEVENLABS_API_KEY = _get_config("ELEVENLABS_API_KEY")
-ELEVENLABS_VOICE_ID = _get_config("ELEVENLABS_VOICE_ID", "mI8xLTBNjMXAf31I4xlB")
-ELEVENLABS_MODEL_ID = _get_config("ELEVENLABS_MODEL_ID", "eleven_turbo_v2_5")
-ELEVENLABS_SPEED = _get_config("ELEVENLABS_SPEED", "1.1")
-ELEVENLABS_STABILITY = _get_config("ELEVENLABS_STABILITY", "0.8")
-ELEVENLABS_SIMILARITY = _get_config("ELEVENLABS_SIMILARITY", "0.65")
-ELEVEN_LABS_DICTIONARY = _get_config("ELEVEN_LABS_DICTIONARY", "XJzlI39QZTGRCuf07IDc")
+
+# ElevenLabs constant configuration values
+ELEVENLABS_VOICE_ID = "mI8xLTBNjMXAf31I4xlB"
+ELEVENLABS_PRIMARY_MODEL = "eleven_v3"
+ELEVENLABS_FALLBACK_MODEL = "eleven_multilingual_v2"
+ELEVENLABS_SPEED = "1.1"
+ELEVENLABS_STABILITY = "1.0"
+ELEVENLABS_SIMILARITY = "0.65"
+ELEVEN_LABS_DICTIONARY = "8fhkpKwIYubK6X8g1AMy"
 
 # Langfuse
 LANGFUSE_PUBLIC_KEY = _get_config("LANGFUSE_PUBLIC_KEY")

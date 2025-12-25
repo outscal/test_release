@@ -48,24 +48,12 @@ class PathManager:
             return f"Outputs/{self.topic}/full-video-tasks.json"
         elif subpath == 'script-file':
             return ClaudeCliConfig.get_final_path(asset)
+        elif subpath == 'variant':
+            return ClaudeCliConfig.get_variant_path(asset)
         else:
             return f"Outputs/{self.topic}/{asset.value}"
 
-    def print_path_info(self, paths: List[str], message: str, quiet: bool = False):
-
-        if not quiet:
-            print(f"\n{'='*60}", file=sys.stderr)
-            print(f"  {message}", file=sys.stderr)
-            print(f"{'='*60}", file=sys.stderr)
-
-            if not paths:
-                print("  No paths found.", file=sys.stderr)
-            else:
-                for path in paths:
-                    print(f"  - {path}", file=sys.stderr)
-
-            print(f"{'='*60}\n", file=sys.stderr)
-
+    def print_path_info(self, paths: List[str], message: str, quiet: bool = True):
         for path in paths:
             print(path)
 
@@ -79,7 +67,6 @@ def main():
     parser.add_argument("--scene-index", type=int)
     parser.add_argument("--subpath", type=str, default='latest')
     parser.add_argument("--asset-name", type=str)
-    parser.add_argument("--quiet", action="store_true")
 
     args = parser.parse_args()
 
@@ -96,7 +83,7 @@ def main():
         if args.asset_name:
             message += f" [asset: {args.asset_name}]"
 
-        manager.print_path_info([path], message, args.quiet)
+        manager.print_path_info([path], message)
 
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)

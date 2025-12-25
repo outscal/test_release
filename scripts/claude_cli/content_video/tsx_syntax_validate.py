@@ -73,6 +73,7 @@ class TsxSyntaxValidator:
             "--noEmit",
             "--jsx", "react-jsx",
             "--esModuleInterop",
+            "--skipLibCheck",
             full_path
         ]
 
@@ -222,8 +223,6 @@ def main():
     )
 
     is_valid, errors = validator.validate()
-
-    # Exit with appropriate code
     sys.exit(0 if is_valid else 1)
 
 

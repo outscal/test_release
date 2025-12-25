@@ -45,12 +45,6 @@ def load_config() -> Dict[str, Any]:
 
     # Update module-level variables with API config
     cfg.ELEVENLABS_API_KEY = cfg._get_config("ELEVENLABS_API_KEY")
-    cfg.ELEVENLABS_VOICE_ID = cfg._get_config("ELEVENLABS_VOICE_ID", "mI8xLTBNjMXAf31I4xlB")
-    cfg.ELEVENLABS_MODEL_ID = cfg._get_config("ELEVENLABS_MODEL_ID", "eleven_turbo_v2_5")
-    cfg.ELEVENLABS_SPEED = cfg._get_config("ELEVENLABS_SPEED", "1.1")
-    cfg.ELEVENLABS_STABILITY = cfg._get_config("ELEVENLABS_STABILITY", "0.8")
-    cfg.ELEVENLABS_SIMILARITY = cfg._get_config("ELEVENLABS_SIMILARITY", "0.65")
-    cfg.ELEVEN_LABS_DICTIONARY = cfg._get_config("ELEVEN_LABS_DICTIONARY", "XJzlI39QZTGRCuf07IDc")
     cfg.LANGFUSE_PUBLIC_KEY = cfg._get_config("LANGFUSE_PUBLIC_KEY")
     cfg.LANGFUSE_SECRET_KEY = cfg._get_config("LANGFUSE_SECRET_KEY")
     cfg.LANGFUSE_HOST = cfg._get_config("LANGFUSE_HOST", "https://langfuse.outscal.com")

@@ -30,7 +30,8 @@ class ClaudeCliConfig:
         },
         AssetType.SCRIPT: {
             "latest_file": "Outputs/{topic}/Scripts/latest.json",
-            "final_path":"Outputs/{topic}/Scripts/script-v1.md",
+            "final_path": "Outputs/{topic}/Scripts/script-v1.md",
+            "variant_path": "Outputs/{topic}/Scripts/script-v1-with-emotions.md",
         },
         AssetType.TRANSCRIPT: {
             "latest_file": "Outputs/{topic}/Transcript/latest.json",
@@ -90,6 +91,10 @@ class ClaudeCliConfig:
     @classmethod
     def get_final_path(cls, asset_type: AssetType) -> str:
         return cls.ASSET_PATHS[asset_type]["final_path"].format(topic=cls.TOPIC)
+
+    @classmethod
+    def get_variant_path(cls, asset_type: AssetType) -> str:
+        return cls.ASSET_PATHS[asset_type]["variant_path"].format(topic=cls.TOPIC)
 
     @classmethod
     def get_prompt_tag(cls, asset_type: AssetType) -> str:

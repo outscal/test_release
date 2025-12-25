@@ -17,7 +17,7 @@
       "Edit(Outputs/*/Video/**)",
       "Edit(Outputs/*/Assets/**)"
     ],
-    "deny": ["Edit(**/*.py)", "Write(*)"],
+    "deny": ["Write(*)"],
     "ask": []
   },
   "enabledMcpjsonServers": ["video_gen_tools"],
